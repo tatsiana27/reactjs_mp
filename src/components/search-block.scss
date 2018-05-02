@@ -1,0 +1,54 @@
+.search-block {
+  font-size: 12px;
+}
+.search-block .title {
+  text-transform: uppercase;
+  color: white;
+}
+
+#movie-title {
+  width: 100%;
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  border-bottom: 1px solid lightcoral;
+  padding: 10px;
+}
+
+.filter-block {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.filter-block div > p {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  background-color: lightgray;
+  padding: 4px 20px;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  background-color: lightcoral;
+}
+#search-btn {
+  background-color: lightcoral;
+  border: 1px solid lightcoral;
+  padding: 2px 40px;
+  text-transform: uppercase;
+  color: white;
+  position: relative;
+  top: 8px;
+  right: -20px;
+}

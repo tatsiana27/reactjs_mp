@@ -1,15 +1,14 @@
 import React from 'react';
-import { Header, Container } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
+
+import { CommonComponent } from './CommonComponent';
+import './layout.scss';
 
 const Layout = ({ children }) => {
     return (
         <Container>
-            <Header className="h1">
-                netflixroulette
-            </Header>
-
             {children}
-
+            <CommonComponent/>
         </Container>
     );
 };
