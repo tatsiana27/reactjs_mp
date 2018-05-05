@@ -17,11 +17,12 @@ const config = {
                 use: ['babel-loader']
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
-                use: [
-                    'url-loader?limit=10000',
-                    'img-loader'
-                ]
+              test: /\.(png|jpg|svg)$/,
+              use: [
+                {
+                  loader: 'file-loader'
+                }
+              ]
             }
         ]
     },
