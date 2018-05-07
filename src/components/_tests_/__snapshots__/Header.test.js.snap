@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should render Header Component with children 1`] = `
+<div
+  className="header"
+>
+  <CommonComponent />
+  <div>
+    <div>
+      mocks children
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Header /> should render Header Component without children 1`] = `
+<div
+  className="header"
+>
+  <CommonComponent />
+  <div />
+</div>
+`;

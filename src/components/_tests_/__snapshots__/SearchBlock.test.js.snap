@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBlock  should render SearchBlock Component 1`] = `
+<form
+  action="#"
+  className="search-block"
+  method="#"
+>
+  <h4
+    className="title"
+  >
+    Find your movie
+  </h4>
+  <input
+    id="movie-title"
+    name="movie"
+    type="text"
+  />
+  <div
+    className="filter-block"
+  >
+    <div>
+      <p>
+        search by
+      </p>
+      <RadioButton
+        id={1}
+        isChecked={true}
+        key="1"
+        name="title"
+        value="title"
+      />
+      <RadioButton
+        id={2}
+        isChecked={false}
+        key="2"
+        name="genre"
+        value="genre"
+      />
+    </div>
+    <div>
+      <button
+        id="search-btn"
+        type="submit"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+</form>
+`;

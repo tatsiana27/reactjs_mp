@@ -1,5 +1,5 @@
 const buildValidations = require('./build-utils/build-validations');
-const commonConfig = require('./build-utils/webpack.common');
+const commonConfig = require('./config/webpack.common');
 
 const webpackMerge = require('webpack-merge');
 
@@ -27,7 +27,7 @@ module.exports = env => {
     // Select which Webpack configuration to use; development
     // or production
     // console.log(env.env); => dev
-    const envConfig = require(`./build-utils/webpack.${env.env}.js`);
+    const envConfig = require(`./config/webpack.${env.env}.js`);
 
     // 'webpack-merge' will combine our shared configurations, the
     // environment specific configurations and any addons we are

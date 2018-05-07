@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton  should render RadioButton Component 1`] = `
+<React.Fragment>
+  <input
+    type="radio"
+  />
+  <label />
+</React.Fragment>
+`;

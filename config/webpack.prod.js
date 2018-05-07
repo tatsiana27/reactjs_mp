@@ -1,10 +1,10 @@
-const commonPaths = require('./common-paths');
+const constants = require('../constants/default');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = {
-    mode: 'production',
+    mode: constants.PROD_MODE,
     entry: {
-        app: [`${commonPaths.appEntry}/index.js`]
+        app: [`${constants.APP_ENTRY}/index.js`]
     },
     output: {
         filename: 'static/[name].[hash].js'

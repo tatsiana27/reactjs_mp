@@ -4,7 +4,7 @@ import { Container } from 'semantic-ui-react';
 import { CommonComponent } from './CommonComponent';
 import './layout.scss';
 
-const Layout = ({ children }) => {
+export function Layout({ children }) {
     return (
         <Container>
             {children}
@@ -12,5 +12,3 @@ const Layout = ({ children }) => {
         </Container>
     );
 };
-
-export default Layout;

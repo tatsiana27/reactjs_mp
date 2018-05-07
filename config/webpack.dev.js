@@ -1,10 +1,10 @@
-const commonPaths = require('./common-paths');
+const constants = require('../constants/default');
 const webpack = require('webpack');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || constants.PORT;
 const config = {
-    mode: 'development',
+    mode: constants.DEV_MODE,
     entry: {
-        app: `${commonPaths.appEntry}/index.js`
+        app: `${constants.APP_ENTRY}/index.js`
     },
     output: {
         filename: '[name].[hash].js'
@@ -26,7 +26,7 @@ const config = {
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-        host: 'localhost',
+        host: constants.LOCALHOST,
         port: port,
         historyApiFallback: true,
         hot: true,

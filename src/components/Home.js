@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import  Layout from './Layout';
+import { Layout } from './Layout';
 import { Header } from './Header';
 import { SearchBlock } from './SearchBlock';
 import { InfoBlock } from './InfoBlock';
 import { MoviesList } from './MoviesList';
 
-class Home extends Component {
+export class Home extends Component {
     render() {
         return (
             <Layout>
@@ -18,5 +18,3 @@ class Home extends Component {
         )
     }
 };
-
-export default Home;

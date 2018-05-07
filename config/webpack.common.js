@@ -1,4 +1,4 @@
-const commonPaths = require('./common-paths');
+const constants = require('../constants/default');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = {
@@ -6,7 +6,7 @@ const config = {
         vendor: ['semantic-ui-react']
     },
     output: {
-        path: commonPaths.outputPath,
+        path: constants.OUTPUT_PATH,
         publicPath: '/'
     },
     module: {

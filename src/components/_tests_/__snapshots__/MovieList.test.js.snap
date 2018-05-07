@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MoviesList  should render MoviesList Component 1`] = `
+<div
+  className="movies-list"
+>
+  <MovieItem
+    genre="comedy"
+    image="src/static/images/movie1.jpg"
+    key="1"
+    releaseDate="2010"
+    title="Movie1"
+  />
+  <MovieItem
+    genre="comedy"
+    image="src/static/images/movie2.jpg"
+    key="2"
+    releaseDate="2011"
+    title="Movie2"
+  />
+  <MovieItem
+    genre="drama"
+    image="src/static/images/movie1.jpg"
+    key="3"
+    releaseDate="2009"
+    title="Movie3"
+  />
+</div>
+`;

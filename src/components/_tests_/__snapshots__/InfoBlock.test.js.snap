@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoBlock  should render InfoBlock Component 1`] = `
+<div
+  className="info-block"
+>
+  <span
+    className="movies-count"
+  >
+    0 movies found
+  </span>
+  <div
+    className="sorting-block"
+  >
+    <p>
+      Sort by
+    </p>
+    <RadioButton
+      id={1}
+      isChecked={false}
+      key="1"
+      name="release date"
+      value="release date"
+    />
+    <RadioButton
+      id={2}
+      isChecked={true}
+      key="2"
+      name="raiting"
+      value="raiting"
+    />
+  </div>
+</div>
+`;

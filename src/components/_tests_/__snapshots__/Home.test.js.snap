@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> should render Home Page Component 1`] = `
+<Layout>
+  <Header>
+    <SearchBlock />
+  </Header>
+  <InfoBlock />
+  <MoviesList />
+</Layout>
+`;

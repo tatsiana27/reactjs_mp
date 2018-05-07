@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MovieItem  should render MovieItem Component 1`] = `
+<div
+  className="movie-item"
+>
+  <img
+    className="movie-item_image"
+  />
+  <div
+    className="movie-item_info"
+  >
+    <div
+      className="movie-item_title"
+    />
+    <div
+      className="movie-item_release-date"
+    />
+  </div>
+  <div
+    className="movie-item_genre"
+  />
+</div>
+`;
