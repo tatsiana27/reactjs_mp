@@ -1,5 +1,7 @@
 .search-block {
   font-size: 12px;
+  display: block;
+  padding:  0 40px;
 }
 .search-block .title {
   text-transform: uppercase;
@@ -26,22 +28,23 @@
   display: inline-block;
   margin-right: 10px;
 }
+.filter-block {
+  label {
+    text-transform: uppercase;
 
-input[type="radio"] {
-  display: none;
+    background-color: lightgray;
+    padding: 4px 20px;
+    margin: {
+      left: 4px;
+      right: 4px;
+    }
+    cursor: pointer;
+  }
+  input[type="radio"]:checked + label {
+    background-color: lightcoral;
+  }
 }
 
-label {
-  background-color: lightgray;
-  padding: 4px 20px;
-  margin-left: 4px;
-  margin-right: 4px;
-  cursor: pointer;
-}
-
-input[type="radio"]:checked + label {
-  background-color: lightcoral;
-}
 #search-btn {
   background-color: lightcoral;
   border: 1px solid lightcoral;

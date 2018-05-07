@@ -1,0 +1,26 @@
+.movies-list {
+  margin: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.movie-item {
+  &_image {
+    max-width: 200px;
+  }
+  &_info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_title {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &_release-date {
+    padding: 0 10px;
+    font-size: .75rem;
+    border: 1px solid gray;
+  }
+  &_genre {
+    font-size: .75rem;
+  }
+}

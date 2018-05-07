@@ -4,7 +4,11 @@
   background-image: url("../static/images/netflix-bg.png");
   padding: 40px;
   color: white;
-}
-.title {
-  color: red;
+  .common_title {
+    padding: {
+      top: 0;
+      bottom: 0;
+    };
+    background-color: transparent;
+  }
 }

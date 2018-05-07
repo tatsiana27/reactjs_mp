@@ -1,0 +1,24 @@
+.info-block {
+  padding: {
+    left: 80px;
+    right: 80px;
+    top: 15px;
+    bottom: 15px;
+  };
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  .sorting-block {
+    display: flex;
+    p {
+      margin: 0;
+    }
+    label {
+      margin: 0 20px;
+      cursor: pointer;
+    }
+  }
+  input[type="radio"]:checked + label {
+    color: red;
+  }
+}

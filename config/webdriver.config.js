@@ -1,29 +1,5 @@
-exports.config = {
+exports.module = {
 
-    // =====================
-    // Server Configurations
-    // =====================
-    // Host address of the running Selenium server. This information is usually obsolete as
-    // WebdriverIO automatically connects to localhost. Also if you are using one of the
-    // supported cloud services like Sauce Labs, Browserstack or Testing Bot you also don't
-    // need to define host and port information because WebdriverIO can figure that out
-    // according to your user and key information. However if you are using a private Selenium
-    // backend you should define the host address, port, and path here.
-    //
-    host: '0.0.0.0',
-    port: 4444,
-    path: '/wd/hub',
-    //
-    // =================
-    // Service Providers
-    // =================
-    // WebdriverIO supports Sauce Labs, Browserstack and Testing Bot (other cloud providers
-    // should work too though). These services define specific user and key (or access key)
-    // values you need to put in here in order to connect to these services.
-    //
-    user: 'webdriverio',
-    key:  'xxxxxxxxxxxxxxxx-xxxxxx-xxxxx-xxxxxxxxx',
-    //
     // ==================
     // Specify Test Files
     // ==================
@@ -33,13 +9,10 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        'test/spec/**'
+        './test/e2e/*.js'
     ],
     // Patterns to exclude.
-    exclude: [
-        'test/spec/multibrowser/**',
-        'test/spec/mobile/**'
-    ],
+    exclude: [],
     //
     // ============
     // Capabilities
@@ -64,45 +37,19 @@ exports.config = {
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        browserName: 'chrome',
-        chromeOptions: {
-            // to run chrome headless the following flags are required
-            // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-            // args: ['--headless', '--disable-gpu'],
+    capabilities: [
+        {
+            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+            // grid with only 5 firefox instance available you can make sure that not more than
+            // 5 instance gets started at a time.
+            maxInstances: 5,
+            browserName: "chrome",
+            chromeOptions: {
+
+            },
+            //seleniumProtocol: "WebDriver",
         }
-    }, {
-        // maxInstances can get overwritten per capability. So if you have an in house Selenium
-        // grid with only 5 firefox instance available you can make sure that not more than
-        // 5 instance gets started at a time.
-        maxInstances: 5,
-        browserName: 'firefox',
-        specs: [
-            'test/ffOnly/*'
-        ],
-        "moz:firefoxOptions": {
-            // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
-            // args: ['-headless']
-        }
-    },{
-        browserName: 'phantomjs',
-        exclude: [
-            'test/spec/alert.js'
-        ]
-    }],
-    //
-    // When enabled opens a debug port for node-inspector and pauses execution
-    // on `debugger` statements. The node-inspector can be attached with:
-    // `node-inspector --debug-port 5859 --no-preload`
-    // When debugging it is also recommended to change the timeout interval of
-    // test runner (eg. jasmineNodeOpts.defaultTimeoutInterval) to a very high
-    // value and setting maxInstances to 1.
-    debug: false,
-    //
-    // Additional list node arguments to use when starting child processes
-    execArgv: null,
-    //
-    //
+    ],
     // ===================
     // Test Configurations
     // ===================
@@ -127,13 +74,13 @@ exports.config = {
     bail: 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: 'shots',
+    screenshotPath: './shots',
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:8080',
+    baseUrl: 'http://localhost:3000',
     //
     // Default timeout for all waitForXXX commands.
     waitforTimeout: 1000,
@@ -145,16 +92,16 @@ exports.config = {
     // WebdriverCSS: https://github.com/webdriverio/webdrivercss
     // WebdriverRTC: https://github.com/webdriverio/webdriverrtc
     // Browserevent: https://github.com/webdriverio/browserevent
-    plugins: {
-        webdrivercss: {
-            screenshotRoot: 'my-shots',
-            failedComparisonsRoot: 'diffs',
-            misMatchTolerance: 0.05,
-            screenWidth: [320,480,640,1024]
-        },
-        webdriverrtc: {},
-        browserevent: {}
-    },
+    // plugins: {
+    //     webdrivercss: {
+    //         screenshotRoot: 'my-shots',
+    //         failedComparisonsRoot: 'diffs',
+    //         misMatchTolerance: 0.05,
+    //         screenWidth: [320,480,640,1024]
+    //     },
+    //     webdriverrtc: {},
+    //     browserevent: {}
+    // },
     //
     // Framework you want to run your specs with.
     // The following are supported: mocha, jasmine and cucumber
@@ -166,7 +113,7 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide.html and click on "Reporters" in left column
-    reporters: ['dot', 'allure'],
+    reporters: ['spec'],
     //
     // Some reporter require additional information which should get defined here
     reporterOptions: {
@@ -185,20 +132,7 @@ exports.config = {
     // Options to be passed to Jasmine.
     // See also: https://github.com/webdriverio/wdio-jasmine-framework#jasminenodeopts-options
     jasmineNodeOpts: {
-        //
-        // Jasmine default timeout
-        defaultTimeoutInterval: 5000,
-        //
-        // The Jasmine framework allows it to intercept each assertion in order to log the state of the application
-        // or website depending on the result. For example it is pretty handy to take a screenshot every time
-        // an assertion fails.
-        expectationResultHandler: function(passed, assertion) {
-            // do something
-        },
-        //
-        // Make use of Jasmine-specific grep functionality
-        grep: null,
-        invertGrep: null
+        defaultTimeoutInterval: 10000
     },
     //
     // If you are using Cucumber you need to specify where your step definitions are located.

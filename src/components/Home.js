@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { SearchBlock } from './SearchBlock';
-import { MoviesList } from './MoviesList';
-import { Header } from './Header';
 import  Layout from './Layout';
+import { Header } from './Header';
+import { SearchBlock } from './SearchBlock';
+import { InfoBlock } from './InfoBlock';
+import { MoviesList } from './MoviesList';
 
 class Home extends Component {
     render() {
@@ -11,6 +12,7 @@ class Home extends Component {
                 <Header>
                     <SearchBlock/>
                 </Header>
+                <InfoBlock/>
                 <MoviesList />
             </Layout>
         )

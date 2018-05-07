@@ -1,34 +1,27 @@
 import React, { Component } from 'react';
+import { RadioButton } from './RadioButton';
+import { FILTERS } from '../data/data';
+
 import './search-block.scss';
 
 export class SearchBlock extends Component {
     render() {
         return (
             <form method="#" action="#" className="search-block">
-                <div>
-                    <h4 className="title">Find your movie</h4>
-                    <input type="text" id="movie-title" name="movie" />
-                </div>
+                <h4 className="title">Find your movie</h4>
+                <input type="text" id="movie-title" name="movie" />
                 <div className="filter-block">
                     <div>
                         <p>search by</p>
-                        <input
-                            id="filter-title"
-                            type="radio"
-                            name="title"
-                            value=""
-                            checked={true}
-                        />
-                        <label htmlFor="filter-title">TITLE</label>
-
-                        <input
-                            id="filter-genre"
-                            type="radio"
-                            name="genre"
-                            value="GENRE"
-                            checked={false}
-                        />
-                        <label htmlFor="filter-genre">GENRE</label>
+                        {FILTERS.map(filter =>
+                            <RadioButton
+                                key={filter.id}
+                                name={filter.name}
+                                id={filter.id}
+                                value={filter.name}
+                                isChecked={filter.checked}
+                            />)
+                        }
                     </div>
                     <div>
                         <button id="search-btn" type="submit">Search</button>
