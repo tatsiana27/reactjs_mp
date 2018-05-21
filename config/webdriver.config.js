@@ -1,3 +1,4 @@
+const constants = require('../constants/default');
 module.exports = {
     //
     // ==================
@@ -76,7 +77,7 @@ module.exports = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost:3000',
+    baseUrl: constants.BASE_URL,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -160,7 +161,6 @@ module.exports = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function (capabilities, specs) {
-        console.log(242323);
     },
     /**
      * Runs before a WebdriverIO command gets executed.

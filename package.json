@@ -21,9 +21,8 @@
     "jest-cli": "^22.4.3",
     "react": "16.3.2",
     "react-dom": "16.3.2",
-    "react-redux": "5.0.7",
+    "react-redux": "^5.0.7",
     "react-router-dom": "4.2.2",
-    "redux": "4.0.0",
     "semantic-ui-react": "0.79.1",
     "webdriverio": "4.12.0"
   },
@@ -54,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-core": "6.26.0",
     "babel-jest": "22.4.3",
     "babel-loader": "7.1.4",
@@ -69,6 +69,8 @@
     "mocha": "^5.1.1",
     "node-sass": "^4.9.0",
     "postcss-loader": "2.1.4",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
     "regenerator-runtime": "0.11.1",
     "rimraf": "2.6.2",
     "sass-loader": "7.0.1",

@@ -13,5 +13,6 @@ module.exports = {
     LOCALHOST: 'localhost',
     PROJECT_ROOT: PROJECT_ROOT,
     OUTPUT_PATH: path.join(PROJECT_ROOT, 'dist'),
-    APP_ENTRY: path.join(PROJECT_ROOT, 'src')
+    APP_ENTRY: path.join(PROJECT_ROOT, 'src'),
+    BASE_URL: 'http://localhost:3000',
 };
