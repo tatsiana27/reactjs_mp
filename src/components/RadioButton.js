@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import './radio-button.scss';
+import '../styles/radio-button.scss';
 
 export function RadioButton(props) {
     return (

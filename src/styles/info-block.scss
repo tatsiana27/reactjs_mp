@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .info-block {
   padding: {
     left: 80px;
@@ -7,7 +9,7 @@
   };
   display: flex;
   justify-content: space-between;
-  background-color: lightgray;
+  background-color: $light-gray;
   .sorting-block {
     display: flex;
     p {
@@ -19,6 +21,6 @@
     }
   }
   input[type="radio"]:checked + label {
-    color: red;
+    color: $red;
   }
 }

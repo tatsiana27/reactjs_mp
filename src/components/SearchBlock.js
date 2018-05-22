@@ -4,7 +4,7 @@ import { searchMovies } from '../actions/movies.action';
 import { RadioButton } from './RadioButton';
 import { FILTERS } from '../data/data';
 
-import './search-block.scss';
+import '../styles/search-block.scss';
 
 export class SearchBlockUI extends Component {
     state = {

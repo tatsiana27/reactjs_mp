@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './movie-item.scss';
+import '../styles/movie-item.scss';
 export function MovieItem(props) {
     return (
         <div className="movie-item">

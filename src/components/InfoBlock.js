@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { RadioButton } from './RadioButton';
 import { SORTINGS } from '../data/data';
 
-import './info-block.scss';
+import '../styles/info-block.scss';
 
 export function InfoBlock() {
     return (

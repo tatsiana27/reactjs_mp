@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 * {
   font-family: "Source Sans Pro";
 }
@@ -8,6 +10,6 @@
 }
 .common_title {
   padding: 15px 40px;
-  background-color: gray;
-  color: #ff0000;
+  background-color: $gray;
+  color: $red1;
 }

@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .movies-list {
   margin: 60px 20px;
   display: flex;
@@ -20,7 +22,7 @@
   &_release-date {
     padding: 0 10px;
     font-size: .75rem;
-    border: 1px solid gray;
+    border: 1px solid $gray;
   }
   &_genre {
     font-size: .75rem;

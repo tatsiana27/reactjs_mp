@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .search-block {
   font-size: 12px;
   display: block;
@@ -5,15 +7,15 @@
 }
 .search-block .title {
   text-transform: uppercase;
-  color: white;
+  color: $white;
 }
 
 #movie-title {
   width: 100%;
-  color: white;
-  background-color: black;
-  border: 1px solid black;
-  border-bottom: 1px solid lightcoral;
+  color: $white;
+  background-color: $black;
+  border: 1px solid $black;
+  border-bottom: 1px solid $light-coral;
   padding: 10px;
 }
 
@@ -32,7 +34,7 @@
   label {
     text-transform: uppercase;
 
-    background-color: lightgray;
+    background-color: $light-gray;
     padding: 4px 20px;
     margin: {
       left: 4px;
@@ -41,16 +43,16 @@
     cursor: pointer;
   }
   input[type="radio"]:checked + label {
-    background-color: lightcoral;
+    background-color: $light-coral;
   }
 }
 
 #search-btn {
-  background-color: lightcoral;
-  border: 1px solid lightcoral;
+  background-color: $light-coral;
+  border: 1px solid $light-coral;
   padding: 2px 40px;
   text-transform: uppercase;
-  color: white;
+  color: $white;
   position: relative;
   top: 8px;
   right: -20px;

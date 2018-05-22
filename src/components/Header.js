@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { CommonComponent } from './CommonComponent';
-import './header.scss';
+import '../styles/header.scss';
 
 export function Header({ children }) {
     return (
