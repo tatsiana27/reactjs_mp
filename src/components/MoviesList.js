@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { MovieItem } from './MovieItem';
 
-import { MOVIES } from '../data/data'
-
 export class MoviesListUI extends Component {
-    // state = {
-    //     movies: []
-    // };
     render() {
         const { data: movies = [] } = this.props.movies;
-            console.log(movies)
         return (
             <div className="movies-list">
                 {movies.map(item =>

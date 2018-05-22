@@ -9,7 +9,8 @@ const axiosMovies = axios.create({
 export function searchMovies(dispatch, payload) {
     const { search, searchBy } = payload;
 
-    return axiosMovies.get(`?search=${search}&searchBy=${searchBy}`)
+    return axiosMovies
+        .get(`?search=${search}&searchBy=${searchBy}`)
         .then(({ data }) => {
             dispatch({
                 type: 'SEARCH_MOVIES',

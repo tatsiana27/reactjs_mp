@@ -1,4 +1,3 @@
-// import { initialState }  from '../helpers/create-store';
 const initialState = {
     movies: {
         data: [],
