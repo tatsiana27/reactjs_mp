@@ -1,0 +1,55 @@
+@import '../styles/variables';
+
+.movie {
+  position: relative;
+  margin: {
+    top: 20px;
+  }
+  display: flex;
+  justify-content: space-between;
+
+  &_info {
+    margin: {
+      left: 30px;
+    }
+  }
+  &_image {
+    height: 350px;
+  }
+  &_title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $red1;
+  }
+  &_vote {
+    margin: {
+      left: 15px;
+    }
+    padding: 4px;
+    color: $yellow4;
+    border: 1px solid $yellow4;
+    border-radius: 50%;
+  }
+  &_additional-info {
+    font-weight: bold;
+    font-size: .75rem;
+  }
+  &_release-date {
+    font-size: .75rem;
+  }
+  &_runtime {
+    margin: {
+      left: 20px;
+    }
+  }
+  .search-btn {
+    background-color: $white;
+    border: 1px solid $white;
+    padding: 2px 40px;
+    text-transform: uppercase;
+    color: $red;
+    position: relative;
+    top: -50px;
+    right: 0;
+  }
+}

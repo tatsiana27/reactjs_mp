@@ -1,5 +1,5 @@
 const buildValidations = require('./build-utils/build-validations');
-const commonConfig = require('./config/webpack.common');
+const commonConfig = require('./config/webpack.common.js');
 
 const webpackMerge = require('webpack-merge');
 

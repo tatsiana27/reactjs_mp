@@ -2,7 +2,10 @@ import React, { Fragment } from 'react';
 
 import '../styles/radio-button.scss';
 
+
 export function RadioButton(props) {
+
+
     return (
         <Fragment>
             <input
@@ -10,9 +13,10 @@ export function RadioButton(props) {
                 type="radio"
                 name={props.name}
                 value={props.value}
-                checked={props.isChecked}
+                checked={props.checked}
+                onChange={props.onChange}
             />
-            <label htmlFor={props.name}>{props.value}</label>
+            <label htmlFor={props.id}>{props.value}</label>
         </Fragment>
     );
 }

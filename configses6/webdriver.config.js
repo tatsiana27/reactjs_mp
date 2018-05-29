@@ -1,6 +1,4 @@
-'use strict';
-
-var _default = require('../constants/default');
+import { BASE_URL } from '../constants/default';
 
 module.exports = {
   //
@@ -78,7 +76,7 @@ module.exports = {
   // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
   // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
   // gets prepended directly.
-  baseUrl: _default.BASE_URL,
+  baseUrl: BASE_URL,
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 10000,

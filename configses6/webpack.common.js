@@ -1,7 +1,4 @@
-'use strict';
-
-var _default = require('../constants/default');
-
+import { OUTPUT_PATH } from '../constants/default';
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var config = {
@@ -9,14 +6,14 @@ var config = {
         vendor: ['semantic-ui-react']
     },
     output: {
-        path: _default.OUTPUT_PATH,
+        path: OUTPUT_PATH,
         publicPath: '/'
     },
     module: {
         rules: [{
             test: /\.(js)$/,
             exclude: /node_modules/,
-            use: [{ loader: 'babel-loader' }]
+            use: [{loader:'babel-loader'}]
         }, {
             test: /\.(png|jpg|svg)$/,
             use: [{

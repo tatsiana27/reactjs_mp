@@ -1,13 +1,10 @@
-'use strict';
-
-var _default = require('../constants/default');
-
+import { PROD_MODE, APP_ENTRY } from '../constants/default';
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = {
-    mode: _default.PROD_MODE,
+    mode: PROD_MODE,
     entry: {
-        app: [_default.APP_ENTRY + '/index.js']
+        app: [APP_ENTRY + '/index.js']
     },
     output: {
         filename: 'static/[name].[hash].js'

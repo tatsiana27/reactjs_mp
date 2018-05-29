@@ -6,31 +6,20 @@ const axiosMovies = axios.create({
     headers: { 'Content-Type': 'application/json' }
 });
 
-
-export function clearMovies(dispatch, payload) {
-    dispatch({
-        type: 'CLEAR_MOVIES',
-        payload,
-    });
-};
-
-export function searchMovies(dispatch, payload) {
-    const { search, searchBy } = payload;
-
-    return axiosMovies
-        .get(`?search=${search}&searchBy=${searchBy}`)
+export function searchMovie(dispatch, id) {
+    return axiosMovies.get(`/${id}`)
         .then(({ data }) => {
             dispatch({
-                type: 'SEARCH_MOVIES',
-                payload: data,
+                type: 'FETCH_MOVIE',
+                payload: { data },
             });
 
             return {
-                type: 'SEARCH_MOVIES',
+                type: 'FETCH_MOVIE',
                 payload: data,
             };
         })
         .catch(err => {
             console.log(err);
         });
-};
+}

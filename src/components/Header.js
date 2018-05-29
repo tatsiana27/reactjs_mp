@@ -9,6 +9,7 @@ export function Header({ children }) {
         <div className="header">
             <CommonComponent/>
             <div>{children}</div>
+            <div className="overlay"></div>
         </div>
     );
 }

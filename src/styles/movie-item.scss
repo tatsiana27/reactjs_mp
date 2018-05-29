@@ -7,6 +7,10 @@
   flex-wrap: wrap;
 }
 .movie-item {
+  max-width: 200px;
+  margin: {
+    bottom: 15px;
+  };
   &_image {
     max-width: 200px;
   }
@@ -16,11 +20,18 @@
     justify-content: space-between;
   }
   &_title {
+    text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 0.75rem;
+    color: $black;
   }
   &_release-date {
+    height: 20px;
     padding: 0 10px;
+    margin: {
+      left: 10px;
+    }
     font-size: .75rem;
     border: 1px solid $gray;
   }

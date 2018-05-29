@@ -2,7 +2,6 @@ const initialState = {
     movies: {
         data: [],
     },
-    movie: {}
 };
 
 export function movies(state = initialState.movies, action) {
@@ -14,6 +13,9 @@ export function movies(state = initialState.movies, action) {
             return {
                 data: movies.concat(payload.data),
             };
+
+        case 'CLEAR_MOVIES':
+            return initialState.movies;
 
         default:
             return state;

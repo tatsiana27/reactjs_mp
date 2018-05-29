@@ -1,3 +1,3 @@
-const config = require('./config/webdriver.config');
+const config = require('./src/config/webdriver.config.js');
 
 exports.config = config;

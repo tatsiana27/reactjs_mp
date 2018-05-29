@@ -1,13 +1,10 @@
-'use strict';
-
-var _default = require('../constants/default');
-
+import { PORT, APP_ENTRY, DEV_MODE, LOCALHOST } from '../constants/default';
 var webpack = require('webpack');
-var port = process.env.PORT || _default.PORT;
+var port = process.env.PORT || PORT;
 var config = {
-    mode: _default.DEV_MODE,
+    mode: DEV_MODE,
     entry: {
-        app: _default.APP_ENTRY + '/index.js'
+        app: APP_ENTRY + '/index.js'
     },
     output: {
         filename: '[name].[hash].js'
@@ -27,7 +24,7 @@ var config = {
     },
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
-        host: _default.LOCALHOST,
+        host: LOCALHOST,
         port: port,
         historyApiFallback: true,
         hot: true,
