@@ -1,0 +1,15 @@
+@import '../../styles/variables';
+
+* {
+  font-family: "Source Sans Pro";
+}
+.container {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+.common_title {
+  padding: 15px 40px;
+  background-color: $gray;
+  color: $red1;
+}

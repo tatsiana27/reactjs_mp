@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+
+.search-block {
+  font-size: 12px;
+  display: block;
+  padding:  0 40px;
+}
+.search-block .title {
+  text-transform: uppercase;
+  color: $white;
+}
+
+#movie-title {
+  width: 100%;
+  color: $white;
+  background-color: $black;
+  border: 1px solid $black;
+  border-bottom: 1px solid $light-coral;
+  padding: 10px;
+}
+
+.filter-block {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.filter-block div > p {
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+.filter-block {
+  label {
+    text-transform: uppercase;
+
+    background-color: $light-gray;
+    padding: 4px 20px;
+    margin: {
+      left: 4px;
+      right: 4px;
+    }
+    cursor: pointer;
+  }
+  input[type="radio"]:checked + label {
+    background-color: $light-coral;
+  }
+}
+
+#search-btn {
+  background-color: $light-coral;
+  border: 1px solid $light-coral;
+  padding: 2px 40px;
+  text-transform: uppercase;
+  color: $white;
+  position: relative;
+  top: 8px;
+  right: -20px;
+}
+
+.d-none {
+  display: none;
+}
+.invalid-input {
+  color: $red1;
+}
+
+.info-block {
+  color: $black;
+  padding: {
+    left: 80px;
+    right: 80px;
+    top: 15px;
+    bottom: 15px;
+  };
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  display: flex;
+
+  justify-content: space-between;
+  background-color: $light-gray;
+  .sorting-block {
+    display: flex;
+    p {
+      margin: 0;
+    }
+    label {
+      margin: 0 20px;
+      cursor: pointer;
+    }
+  }
+  input[type="radio"]:checked + label {
+    color: $red;
+  }
+}
