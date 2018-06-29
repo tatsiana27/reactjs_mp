@@ -1,17 +1,16 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-//import styles from './MoviesPage.css';
 import { Layout } from '../Layout';
 import { Header } from '../../components/Header';
-import SearchBlock from '../../components/SearchBlock';
-import MoviesList from '../../components/MoviesList';
 import Loader from '../../components/Loader';
+import MoviesList from '../../components/MoviesList';
+import SearchBlock from '../../components/SearchBlock';
 
 class MoviesPage extends PureComponent {
   static propTypes = {
     fetchMovies: PropTypes.func.isRequired,
     loading: PropTypes.bool.isRequired,
-    movies: PropTypes.shape({}),
+    movies: PropTypes.shape({}).isRequired,
   };
   static defaultProps = {
     movies: {},
@@ -34,15 +33,13 @@ class MoviesPage extends PureComponent {
   render() {
     const { loading, movies, params } = this.props;
 
-    //console.log('params', params);
-
     return (
       <Layout>
         <Loader loading={loading} />
         <Header>
           <SearchBlock params={params} movies={movies}/>
         </Header>
-        <MoviesList movies={movies.data} />
+        <MoviesList />
       </Layout>
     );
   }

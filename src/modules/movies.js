@@ -2,9 +2,9 @@ import { call, put, all, takeLatest } from 'redux-saga/effects';
 import isEmpty from 'lodash/isEmpty';
 
 // Actions
-const FETCH_MOVIES = 'movies/FETCH';
+const FETCH_MOVIES = 'FETCH';
 const FETCH_MOVIE_BY_ID = 'movies/FETCH_BY_ID';
-const UPDATE = 'movies/UPDATE';
+const UPDATE = 'UPDATE';
 const UPDATE_CURRENT_MOVIE = 'movies/UPDATE_CURRENT_MOVIE';
 const UPDATE_PARAMS = 'params/UPDATE';
 
@@ -36,7 +36,7 @@ export const updateParams = params => ({
 // Sagas
 export function* fetchMoviesAsync(action) {
 
-  let movies = yield [];
+  let movies = yield {};
 
   if(!isEmpty(action.payload)) {
     const search = action.payload.search ? action.payload.search : '';
@@ -54,9 +54,13 @@ export function* watchFetchMovies() {
 }
 
 export function* fetchMovieByIdAsync(action) {
-  debugger;
   const response = yield call(fetch, `http://react-cdp-api.herokuapp.com/movies/${action.payload}`);
   const movie = yield response.json();
+
+  if(!isEmpty(movie)) {
+    const genre = yield movie.genres[0];
+    yield put(updateParams({search: genre, searchBy: 'genre', sortBy: 'raiting'}));
+  }
 
   yield put(updateCurrentMovie(movie));
 }
@@ -87,12 +91,12 @@ export function* paramsSaga() {
 const INITIAL_STATE = {
   movies: {
     loading: false,
-    items: [],
+    items: {},
   },
   params: {
     search: '',
-    searchBy: '',
-    sortBy: '',
+    searchBy: 'title',
+    sortBy: 'raiting',
   },
 };
 

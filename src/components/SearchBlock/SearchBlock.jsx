@@ -8,10 +8,6 @@ import { isValidSearchInputValue } from '../../helpers/is-valid-search-input-val
 import { FILTERS, SORTINGS } from '../../data';
 
 import { RadioButton } from '../RadioButton';
-// import PropTypes from 'prop-types';
-//
-// import Movie from '../Movie';
-// import EmptyResult from '../EmptyResult';
 import './SearchBlock.scss';
 
 export class SearchBlock extends Component {
@@ -126,6 +122,10 @@ export class SearchBlock extends Component {
 
 SearchBlock.propTypes = {
   movies: PropTypes.shape({}).isRequired,
+};
+
+SearchBlock.defaultProps = {
+  movies: {},
 };
 
 const mapStateToProps = state => ({
